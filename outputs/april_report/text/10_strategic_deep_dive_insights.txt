@@ -1,0 +1,149 @@
+========================================================================================
+  STRATEGIC DEEP DIVE
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 13:02:41
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Strategic Deep Dive
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 10.1: Pre-Election Strategy Pivot Analysis
+  ──────────────────────────────────────────────────
+
+  Change in key metrics from Jun–Aug 2023 to Jan–May 2024:
+  
+      • YSRCP: Negative%=+2.1pp, Positive%=+2.0pp, Anger%=+0.2pp, Aggressive%=-0.4pp, Fact%=-6.5pp  (Total |Δ|=11.2pp)
+      • TDP: Negative%=+3.9pp, Positive%=-2.8pp, Anger%=+0.0pp, Aggressive%=+0.9pp, Fact%=-4.7pp  (Total |Δ|=12.3pp)
+      • NCBN: Negative%=-11.3pp, Positive%=+3.6pp, Anger%=-7.5pp, Aggressive%=-4.7pp, Fact%=-0.2pp  (Total |Δ|=27.3pp)
+      • YS Jagan: Negative%=+9.2pp, Positive%=-11.4pp, Anger%=+17.0pp, Aggressive%=+20.2pp, Fact%=-25.3pp  (Total |Δ|=83.1pp)
+  
+    YS Jagan pivoted the MOST (total |Δ|=83.1pp), indicating the largest pre-election strategic repositioning.
+    YSRCP pivoted the LEAST (total |Δ|=11.2pp), suggesting a more consistent long-term strategy.
+
+  Methodology: Δ = value in Jan–May 2024 minus value in Jun–Aug 2023 per metric per account. Total |Δ| = sum of absolute deltas across all metrics.
+
+────────────────────────────────────────
+
+  INSIGHT 10.2: Top 1% Viral Posts Profile (n=219)
+  ────────────────────────────────────────────────
+
+  What characterises the highest-engagement posts?
+  
+    Sentiment: Negative=26.0% (vs 33.0% overall), Positive=30.1% (vs 25.0% overall)
+  
+    Account distribution of top posts:
+      • TDP: 109 posts (49.8%)
+      • YSRCP: 95 posts (43.4%)
+      • NCBN: 8 posts (3.7%)
+      • YS Jagan: 7 posts (3.2%)
+  
+    Positive content is over-represented in the top 1% posts, supporting the finding that positive content drives engagement.
+
+  Methodology: Top 1% = 219 posts with highest Engagement_Rate_Monthly. Compared against overall dataset distribution.
+
+────────────────────────────────────────
+
+  INSIGHT 10.3: Content Volume vs Per-Post Engagement Paradox
+  ───────────────────────────────────────────────────────────
+
+  Volume and engagement per account:
+  
+      • YSRCP: 12,208 posts, Mean ER=1.0148%
+      • TDP: 8,353 posts, Mean ER=1.7266%
+      • NCBN: 869 posts, Mean ER=1.3460%
+      • YS Jagan: 479 posts, Mean ER=2.5978%
+  
+    YSRCP posts the most but does NOT have the highest per-post engagement.
+    This suggests a content saturation / fatigue effect — more posts lead to lower per-post engagement.
+
+  Methodology: Volume = count of posts per account. Mean ER = mean(Engagement_Rate_Monthly) × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 10.4: Hashtag Strategy — Amplification vs Contradiction
+  ───────────────────────────────────────────────────────────────
+
+  How accounts use hashtags relative to caption sentiment:
+  
+      • YSRCP: Amplify=37.4%, Neutral Pair=59.2%, Contradict=3.3%
+      • TDP: Amplify=35.3%, Neutral Pair=57.8%, Contradict=6.9%
+      • NCBN: Amplify=31.3%, Neutral Pair=57.6%, Contradict=11.2%
+      • YS Jagan: Amplify=33.5%, Neutral Pair=48.7%, Contradict=17.8%
+  
+    YS Jagan has the highest contradiction rate (17.8%), meaning it most frequently uses hashtags with opposite sentiment to the caption. This "contradiction" strategy may serve to inject negative hashtags into otherwise positive content (strategic poisoning) or use positive hashtags to soften negative content (strategic softening).
+
+  Methodology: Amplification = both sentiment and hashtag have same non-neutral polarity. Neutral Pairing = at least one is neutral. Contradiction = opposite polarity (Pos+Neg or Neg+Pos).
+
+────────────────────────────────────────
+
+  INSIGHT 10.5: Emotion-Driven Engagement Premium
+  ───────────────────────────────────────────────
+
+  Engagement premium by emotion (vs overall mean ER=1.3395%):
+  
+      • Anger: -0.0944pp
+      • Trust: -0.1505pp
+      • Pride: +0.0651pp
+      • Hope: +0.2512pp
+      • Informational: +0.1487pp
+      • Fear: +0.2222pp
+  
+    Hope gives the highest engagement premium (+0.2512pp), while Trust gives the lowest (-0.1505pp).
+  
+    This reveals which emotional appeals are most "rewarded" by audiences. Politicians seeking engagement should lean into Hope-driven content.
+
+  Methodology: Premium = mean ER for that emotion minus overall mean ER. All values computed from classified posts only.
+
+────────────────────────────────────────
+
+  INSIGHT 10.6: Alliance Strategy Asymmetry — Key Divergence Points
+  ─────────────────────────────────────────────────────────────────
+
+  Head-to-head alliance comparison across 14 dimensions:
+  
+      • Negative%: YSRCP=28.7%, TDP=38.8%, Δ=-10.1pp
+      • Positive%: YSRCP=30.6%, TDP=17.4%, Δ=+13.1pp
+      • Neutral%: YSRCP=40.7%, TDP=43.8%, Δ=-3.0pp
+      • Anger%: YSRCP=35.7%, TDP=50.0%, Δ=-14.3pp
+      • Hope%: YSRCP=11.0%, TDP=12.4%, Δ=-1.5pp
+      • Trust%: YSRCP=21.7%, TDP=8.6%, Δ=+13.1pp
+      • Pride%: YSRCP=15.0%, TDP=11.2%, Δ=+3.8pp
+      • Fear%: YSRCP=0.6%, TDP=2.0%, Δ=-1.5pp
+      • Aggressive%: YSRCP=39.7%, TDP=53.1%, Δ=-13.4pp
+      • Persuasive%: YSRCP=44.2%, TDP=26.6%, Δ=+17.6pp
+      • Inspirational%: YSRCP=13.9%, TDP=13.5%, Δ=+0.4pp
+      • Victim Nar.%: YSRCP=1.6%, TDP=6.1%, Δ=-4.5pp
+      • Fact%: YSRCP=31.6%, TDP=17.4%, Δ=+14.2pp
+      • Opinion%: YSRCP=26.4%, TDP=39.4%, Δ=-13.0pp
+  
+    The LARGEST divergence is on **Persuasive%** (Δ=17.6pp), revealing the primary strategic battlefield between the two alliances.
+
+  Methodology: Each metric computed per alliance. Δ = YSRCP Alliance minus TDP Alliance.
+
+────────────────────────────────────────
+
+  INSIGHT 10.7: STRATEGIC COMMUNICATION SYNTHESIS
+  ───────────────────────────────────────────────
+
+  Overarching strategic findings:
+  
+    1. ROLE-BASED STRATEGY: TDP Alliance (opposition) adopts a systematically more negative/aggressive posture than YSRCP Alliance (incumbent), consistent with classic opposition communication theory.
+  
+    2. LEADER VS PARTY DIFFERENTIATION: Leader accounts (YS Jagan, NCBN) are strategically positioned differently from their party accounts — leaders tend to maintain more distinct communication personas.
+  
+    3. ENGAGEMENT PARADOX: Positive content outperforms in engagement, challenging nothing — this is expected.
+  
+    4. PLATFORM ADAPTATION: Accounts show varying degrees of platform-specific strategy, with some maintaining consistency and others diverging.
+  
+    5. PRE-ELECTION DYNAMICS: YS Jagan shows the largest strategic pivot as elections approach, while YSRCP maintains the most stable strategy.
+
+  Methodology: Synthesis of insights 10.1–10.6.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

@@ -1,0 +1,158 @@
+========================================================================================
+  SUBJECTIVITY ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:32:56
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Subjectivity Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 5.1: Overall Subjectivity Distribution
+  ──────────────────────────────────────────────
+
+  Among 19,790 classified posts:
+  
+      • Fact: 5,143 (26.0%)
+      • Mixed: 8,392 (42.4%)
+      • Opinion: 6,255 (31.6%)
+  
+    Mixed content is the most prevalent category, indicating that AP political posts frequently blend factual claims with opinion-based commentary. Pure opinion posts outnumber pure fact-based posts, suggesting the discourse leans more toward subjective interpretation than objective reporting.
+
+  Methodology: Counts of subj_label per label ÷ 19,790 × 100. Fact = primarily factual assertions. Opinion = subjective commentary. Mixed = blend of both.
+
+────────────────────────────────────────
+
+  INSIGHT 5.2: Subjectivity Breakdown by Account
+  ──────────────────────────────────────────────
+
+  Per-account subjectivity profiles:
+  
+      • YSRCP (n=11,525): Fact=32.1%, Mixed=41.5%, Opinion=26.3%
+      • TDP (n=7,045): Fact=19.0%, Mixed=42.0%, Opinion=39.0%
+      • NCBN (n=834): Fact=4.2%, Mixed=52.8%, Opinion=43.0%
+      • YS Jagan (n=386): Fact=16.6%, Mixed=53.6%, Opinion=29.8%
+  
+    YSRCP has the highest fact-based proportion at 32.1%, while NCBN has the highest opinion proportion at 43.0%. This reveals fundamentally different content strategies: some accounts position themselves as information sources, others as opinion leaders.
+
+  Methodology: subj_label counts per _account ÷ total classified posts per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 5.3: Do Fact-Based Posts Lean More Negative?
+  ────────────────────────────────────────────────────
+
+  Sentiment distribution within each subjectivity category:
+  
+      • Fact: Pos=44.1%, Neu=53.1%, Neg=2.8%
+      • Mixed: Pos=33.2%, Neu=38.8%, Neg=28.0%
+      • Opinion: Pos=3.5%, Neu=23.5%, Neg=72.9%
+  
+    This cross-analysis reveals whether facts are used more for negative framing (e.g., citing statistics about governance failures) or positive framing (e.g., citing development achievements). Similarly, it shows whether opinion content skews positive (cheerleading) or negative (criticism).
+
+  Methodology: Cross-tab of subj_label × sentiment_label, row-normalised (each row sums to 100%). Percentages = count of posts with that subjectivity+sentiment pair ÷ total posts with that subjectivity × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 5.4: Subjectivity × Rhetorical Tone Relationship
+  ────────────────────────────────────────────────────────
+
+  Tone distribution within each subjectivity category:
+  
+      • Fact: Agg=5.6%, Per=72.4%, Ins=20.2%, VN=1.0%
+      • Mixed: Agg=38.4%, Per=38.9%, Ins=17.0%, VN=5.0%
+      • Opinion: Agg=86.4%, Per=6.0%, Ins=4.0%, VN=3.2%
+  
+    This reveals the rhetorical function of facts vs opinions: e.g., are facts primarily wielded aggressively (as weapons in political attacks) or persuasively (as evidence for policy proposals)?
+
+  Methodology: Cross-tab of subj_label × tone_primary, row-normalised. Neutral-tone excluded. Percentages = count of posts with subj+tone pair ÷ total posts with that subjectivity × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 5.5: Alliance Subjectivity Comparison
+  ─────────────────────────────────────────────
+
+  YSRCP Alliance (n=11,911):
+      Fact: 31.6%
+      Mixed: 41.9%
+      Opinion: 26.4%
+  
+    TDP Alliance (n=7,879):
+      Fact: 17.4%
+      Mixed: 43.1%
+      Opinion: 39.4%
+  
+    The alliance with a higher Fact percentage may be leveraging data and evidence more in its messaging, while a higher Opinion percentage suggests more rhetorical and persuasion-based communication.
+
+  Methodology: subj_label counts per _alliance ÷ total classified posts per alliance × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 5.6: Subjectivity Temporal Trends
+  ─────────────────────────────────────────
+
+  Subjectivity evolution:
+  
+      • Jun–Aug 2023: Fact=28.4%, Mixed=41.4%, Opinion=30.2%
+      • Sep–Dec 2023: Fact=30.4%, Mixed=44.0%, Opinion=25.6%
+      • Jan–May 2024: Fact=21.5%, Mixed=41.9%, Opinion=36.6%
+  
+    Fact-based content shifts from 28.4% (Jun–Aug 2023) to 21.5% (Jan–May 2024), a change of -6.9pp. This may reflect changing campaign strategies as elections approach — parties may rely more on data/facts (governance track record) or shift to more emotional/opinion-based appeals for voter mobilisation.
+
+  Methodology: subj_label counts per _timeline ÷ total classified posts per timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 5.7: Fact-to-Opinion Ratio per Account
+  ──────────────────────────────────────────────
+
+  F/O Ratio (>1 = more fact-based; <1 = more opinion-based):
+  
+      • YSRCP: 1.22 (Fact=3,705, Opinion=3,034)
+      • TDP: 0.49 (Fact=1,339, Opinion=2,747)
+      • NCBN: 0.10 (Fact=35, Opinion=359)
+      • YS Jagan: 0.56 (Fact=64, Opinion=115)
+  
+    This single metric captures the "information vs persuasion" balance of each account. A higher ratio suggests a more evidence-driven communication approach; a lower ratio suggests a more rhetoric-driven approach.
+
+  Methodology: Ratio = count(Fact) ÷ count(Opinion) per account. Mixed posts excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 5.8: Subjectivity Classifier Confidence
+  ───────────────────────────────────────────────
+
+  Mean classifier confidence by subjectivity label:
+  
+      • Fact: 0.749
+      • Mixed: 0.700
+      • Opinion: 0.724
+  
+    Fact posts have the highest mean confidence (0.749), indicating the model finds the clearest linguistic signals for that category. Mixed posts typically have lower confidence as they contain signals for both fact and opinion, creating classifier ambiguity.
+
+  Methodology: Mean of subj_conf per subj_label. Higher = more certain classification.
+
+────────────────────────────────────────
+
+  INSIGHT 5.9: Conclusion — Subjectivity Landscape
+  ────────────────────────────────────────────────
+
+  The subjectivity landscape of AP political social media reveals:
+  
+    1. Mixed content dominates at 42.4%, reflecting the inherently blended nature of political messaging.
+    2. Opinion content (31.6%) exceeds pure fact content (26.0%), indicating a discourse leaning toward subjective commentary.
+    3. YSRCP is the most fact-oriented account.
+    4. Fact-based posts show distinct sentiment and tone profiles compared to opinion-based posts.
+    5. The relationship between subjectivity, sentiment, and tone reveals how political actors strategically deploy facts and opinions in their communication.
+  
+    These findings inform understanding of political information quality and the fact-vs-opinion balance that characterises AP political social media discourse.
+
+  Methodology: Synthesis of insights 5.1–5.8.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

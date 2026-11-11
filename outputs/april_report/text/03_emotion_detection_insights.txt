@@ -1,0 +1,198 @@
+========================================================================================
+  EMOTION DETECTION ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 11:58:43
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Emotion Detection Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 3.1: Overall Primary Emotion Distribution
+  ─────────────────────────────────────────────────
+
+  Among 19,790 classified posts, the primary emotion distribution is:
+  
+      • Anger: 8,198 (41.4%)
+      • Trust: 3,264 (16.5%)
+      • Pride: 2,672 (13.5%)
+      • Hope: 2,283 (11.5%)
+      • Informational: 3,147 (15.9%)
+      • Fear: 226 (1.1%)
+  
+    Anger is the dominant emotion across AP political social media, comprising over one-third of all classified posts. This is followed by Trust and Pride — suggesting a discourse landscape polarised between attack/outrage content and leader-loyalty/achievement-celebration content. Fear is rare (1.1%), indicating that fear-based messaging is not a primary tool in AP politics. Informational posts (15.9%) represent factual/news-style content without strong emotional valence.
+
+  Methodology: Counts of emo_primary per label ÷ 19,790 (total classified posts) × 100. Classifier: fine-tuned emotion detection model with 6-class output. SKIPPED/_insufficient posts excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 3.2: Emotion Profile by Account
+  ───────────────────────────────────────
+
+  Per-account emotion breakdown:
+  
+      • YSRCP (n=11,525): Dominant = Anger (36.0%) | Anger=36.0%, Trust=22.1%, Pride=14.4%, Hope=10.6%
+      • TDP (n=7,045): Dominant = Anger (49.9%) | Anger=49.9%, Trust=9.0%, Pride=11.0%, Hope=11.4%
+      • NCBN (n=834): Dominant = Anger (51.2%) | Anger=51.2%, Trust=4.7%, Pride=13.2%, Hope=20.6%
+      • YS Jagan (n=386): Dominant = Pride (32.1%) | Anger=27.5%, Trust=9.3%, Pride=32.1%, Hope=21.8%
+  
+    NCBN has the highest anger percentage, YSRCP leads in trust, and YS Jagan in hope. These profiles reveal distinct emotional strategies: some accounts lead with outrage-driven content (attack messaging), while others emphasise loyalty/achievement narratives.
+
+  Methodology: emo_primary counts per _account ÷ total classified posts for that account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 3.3: Anger Rate Ranking — Who Attacks Most?
+  ───────────────────────────────────────────────────
+
+  Anger as a percentage of classified posts, ranked:
+  
+      1. NCBN: 51.2% (427 posts)
+      2. TDP: 49.9% (3,516 posts)
+      3. YSRCP: 36.0% (4,149 posts)
+      4. YS Jagan: 27.5% (106 posts)
+  
+    The spread between highest and lowest anger rate is 23.7 percentage points. In political communication research, high anger content is typically associated with opposition/attack strategies designed to mobilise discontented voters.
+
+  Methodology: Count of emo_primary="Anger" per account ÷ total classified posts per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 3.4: Positive vs Negative Emotion Basket Analysis
+  ─────────────────────────────────────────────────────────
+
+  Positive emotion basket (Pride + Trust + Hope) vs Negative (Anger + Fear):
+  
+      • YSRCP: Positive basket=47.2% (n=5,438), Negative basket=36.5% (n=4,212), Ratio=1.29
+      • TDP: Positive basket=31.5% (n=2,216), Negative basket=52.1% (n=3,667), Ratio=0.60
+      • NCBN: Positive basket=38.5% (n=321), Negative basket=52.3% (n=436), Ratio=0.74
+      • YS Jagan: Positive basket=63.2% (n=244), Negative basket=28.2% (n=109), Ratio=2.24
+  
+    A ratio > 1.0 means the account's posts have more positive than negative emotions; < 1.0 means negative emotions dominate. This basket analysis provides a simplified emotional polarity metric for each account.
+
+  Methodology: Positive basket = count of emo_primary in (Pride, Trust, Hope) per account. Negative basket = count of emo_primary in (Anger, Fear) per account. Ratio = positive count ÷ negative count. Informational excluded from both baskets.
+
+────────────────────────────────────────
+
+  INSIGHT 3.5: Fear Analysis — Rare but Significant
+  ─────────────────────────────────────────────────
+
+  Fear appears in only 226 posts (1.1% of classified posts), making it the rarest primary emotion.
+  
+    Fear distribution by account:
+      • TDP: 151 posts
+      • YSRCP: 63 posts
+      • NCBN: 9 posts
+      • YS Jagan: 3 posts
+  
+    Fear distribution by timeline:
+      • Jun–Aug 2023: 66 posts
+      • Sep–Dec 2023: 72 posts
+      • Jan–May 2024: 88 posts
+  
+    Despite its rarity, fear-based content can disproportionately affect voter perceptions. In AP politics, the low fear rate suggests the discourse is more confrontational (anger) than anxiety-driven (fear).
+
+  Methodology: Count of emo_primary="Fear" = 226. Broken down by _account and _timeline. Percentage = fear count ÷ 19,790 × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 3.6: Informational Posts — Emotionally Neutral Content
+  ──────────────────────────────────────────────────────────────
+
+  Informational posts (3,147, 15.9%) lack strong emotional valence and represent factual/news-style content.
+  
+    Per-account Informational rates:
+      • YSRCP: 16.3%
+      • TDP: 16.5%
+      • NCBN: 9.2%
+      • YS Jagan: 8.5%
+  
+    The account with the highest informational rate may be positioning itself as a credible news source rather than an emotional mobiliser.
+
+  Methodology: Count of emo_primary="Informational" per account ÷ total classified posts per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 3.7: Top Secondary Emotion Co-occurrences
+  ─────────────────────────────────────────────────
+
+  Among 8,281 posts with a valid secondary emotion, the most common primary-secondary pairings are:
+  
+      • ('Trust', 'Pride'): 1,425 posts
+      • ('Pride', 'Trust'): 1,333 posts
+      • ('Trust', 'Hope'): 1,047 posts
+      • ('Hope', 'Trust'): 932 posts
+      • ('Anger', 'Fear'): 894 posts
+  
+    These pairings reveal the emotional "texture" of posts. For instance, an Anger-Fear pairing suggests anxiety-laden critique, while an Anger-Hope pairing might represent frustrated optimism.
+
+  Methodology: Cross-tab of emo_primary × emo_secondary for posts where emo_secondary is one of (Anger, Pride, Fear, Hope, Trust). Posts with NaN secondary emotion excluded. Top 5 pairs by raw count.
+
+────────────────────────────────────────
+
+  INSIGHT 3.8: Emotion–Engagement Relationship
+  ────────────────────────────────────────────
+
+  Mean Engagement Rate (Monthly) by primary emotion:
+  
+      • Hope: 1.5907% (n=2,283)
+      • Fear: 1.5616% (n=226)
+      • Informational: 1.4881% (n=3,147)
+      • Pride: 1.4045% (n=2,672)
+      • Anger: 1.2451% (n=8,198)
+      • Trust: 1.1890% (n=3,264)
+  
+    Hope posts receive the highest mean engagement rate, while Trust receives the lowest. The difference is 0.4017 percentage points. This indicates which emotional appeals resonate most with social media audiences in AP political discourse.
+
+  Methodology: Mean of Engagement_Rate_Monthly per emo_primary label. Engagement_Rate_Monthly is a pre-computed metric. Values shown as percentages (×100). Classified posts only.
+
+────────────────────────────────────────
+
+  INSIGHT 3.9: Alliance Emotion Comparison
+  ────────────────────────────────────────
+
+  YSRCP Alliance (n=11,911):
+      Anger: 35.7%
+      Trust: 21.7%
+      Pride: 15.0%
+      Hope: 11.0%
+      Informational: 16.0%
+      Fear: 0.6%
+  
+    TDP Alliance (n=7,879):
+      Anger: 50.0%
+      Trust: 8.6%
+      Pride: 11.2%
+      Hope: 12.4%
+      Informational: 15.7%
+      Fear: 2.0%
+  
+    The key emotional divergence between the two alliances lies in their anger-to-trust balance. A higher anger ratio suggests a more attack-oriented campaign strategy, while higher trust/hope suggests a governance-showcase approach.
+
+  Methodology: emo_primary counts per _alliance (YSRCP+YS Jagan vs TDP+NCBN) ÷ total classified posts per alliance × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 3.10: Conclusion — Emotion Landscape
+  ────────────────────────────────────────────
+
+  The AP political emotion landscape is characterised by:
+  
+    1. Anger dominance at 41.4% — the most common emotion.
+    2. Significant inter-account variation in emotional profiles.
+    3. Fear is rare (1.1%), suggesting confrontation over anxiety.
+    4. Anger shows increasing trend from 41.0% to 41.4% across the study period.
+    5. Hope posts generate the highest engagement, suggesting that audiences respond most to hope-based content.
+    6. Complex emotional textures exist in secondary emotion pairings.
+  
+    These findings establish the emotional underpinning of political discourse in AP, revealing that attack-based (anger) messaging is the dominant strategy, but trust-building and pride-based content also plays a significant role for certain accounts.
+
+  Methodology: Synthesis of insights 3.1–3.9. No new calculations.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

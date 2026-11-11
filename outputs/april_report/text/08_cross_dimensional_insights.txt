@@ -1,0 +1,160 @@
+========================================================================================
+  CROSS-DIMENSIONAL ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:41:20
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Cross-Dimensional Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 8.1: Sentiment–Emotion Alignment Analysis
+  ─────────────────────────────────────────────────
+
+  How well do sentiment labels align with emotions?
+  
+    • Of Negative-sentiment posts, 88.5% have Anger as primary emotion
+    • Of Positive-sentiment posts, 91.1% have Hope/Trust/Pride
+    • Of Neutral-sentiment posts, 30.2% have Informational emotion
+  
+    The alignment is strong for negative-anger pairing, indicating that sentiment and emotion classifiers are highly coherent. The 11.5% of negative posts that are NOT angry may represent fear-based, sad, or critical-but-composed content.
+
+  Methodology: Cross-tab of sentiment_label × emo_primary. Alignment = count of expected pairing ÷ total of that sentiment × 100. Expected: Negative→Anger/Fear, Positive→Hope/Trust/Pride, Neutral→Informational.
+
+────────────────────────────────────────
+
+  INSIGHT 8.2: Sentiment–Tone Alignment Analysis
+  ──────────────────────────────────────────────
+
+  How well do sentiment labels align with rhetorical tones?
+  
+    • Of Negative-sentiment posts, 90.3% have Aggressive tone
+    • Of Positive-sentiment posts, 97.3% have Persuasive/Inspirational tone
+  
+    The sentiment-tone alignment reveals how political actors pair negative content with aggressive rhetoric (attack messaging) vs other approaches. The 9.7% of negative posts that are NOT aggressive may use victim narrative, defensive, or measured critique approaches.
+
+  Methodology: Cross-tab of sentiment_label × tone_primary. Negative→Aggressive alignment = count ÷ total Negative posts × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 8.3: Caption-Hashtag Sentiment Mismatch Rate
+  ────────────────────────────────────────────────────
+
+  Overall mismatch rate: 48.5% (agreement: 51.5%)
+  
+    Per-account mismatch rates:
+      • YSRCP: 48.0% mismatch
+      • TDP: 48.0% mismatch
+      • NCBN: 57.4% mismatch
+      • YS Jagan: 60.7% mismatch
+  
+    YS Jagan has the highest mismatch (60.7%), suggesting more strategic use of hashtags that diverge from caption sentiment. YSRCP has the lowest (48.0%), indicating more internally consistent messaging.
+
+  Methodology: Mismatch = 100 - agreement%. Agreement = posts where sentiment_label == hashtag_dominant_label. NoHashtags posts excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 8.4: Composite Negativity Index — Overall Ranking
+  ─────────────────────────────────────────────────────────
+
+  Composite Negativity Index = (Negative% + Anger% + Aggressive%) ÷ 3:
+  
+      • NCBN: 49.6
+      • TDP: 47.1
+      • YSRCP: 35.0
+      • YS Jagan: 26.1
+  
+    NCBN has the highest composite negativity index (49.6), indicating the most uniformly negative communication posture across sentiment, emotion, and tone dimensions. YS Jagan has the lowest (26.1), suggesting a more balanced or positive communication approach.
+  
+    This composite index provides a single-number summary that captures the multi-dimensional negativity of each account, going beyond any single classifier.
+
+  Methodology: Index components: Negative% from sentiment_label, Anger% from emo_primary, Aggressive% from tone_primary. Each calculated from its respective subset. Index = simple average of the three percentages. Range: 0 (no negativity) to ~100 (maximum).
+
+────────────────────────────────────────
+
+  INSIGHT 8.5: Emotion–Tone Cross-Patterns
+  ────────────────────────────────────────
+
+  How do emotions map to rhetorical tones?
+  
+    Anger posts: 92.7% are Aggressive, 0.7% are Persuasive
+    Hope posts: 58.7% are Persuasive, 33.4% are Inspirational
+    Trust posts: 71.6% are Persuasive
+  
+    The emotion-tone mapping reveals how emotional content gets expressed rhetorically. Anger overwhelmingly pairs with Aggressive tone — a natural alignment. But not all anger is aggressive; some angry posts use persuasive or even victim narrative framing.
+
+  Methodology: Cross-tab of emo_primary × tone_primary. Row-normalised: % = count ÷ total posts with that emotion × 100. Neutral-tone excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 8.6: Messaging Consistency Analysis
+  ───────────────────────────────────────────
+
+  Messaging consistency score per account (higher = more internally coherent):
+  
+      • YSRCP: 71.6
+      • TDP: 70.7
+      • NCBN: 67.6
+      • YS Jagan: 65.3
+  
+    YSRCP has the most internally consistent messaging, meaning its caption sentiment, hashtag sentiment, and emotion-sentiment pairings align well. YS Jagan has the most inconsistent messaging, which may indicate strategic complexity or mixed messaging.
+
+  Methodology: Consistency = average of (1) caption-hashtag agreement rate and (2) sentiment-emotion alignment rate per account.
+
+────────────────────────────────────────
+
+  INSIGHT 8.7: Alliance Multi-Dimensional Profile Summary
+  ───────────────────────────────────────────────────────
+
+  YSRCP Alliance:
+      Negative%: 28.7%
+      Positive%: 30.6%
+      Anger%: 35.7%
+      Hope%: 11.0%
+      Aggressive%: 39.7%
+      Persuasive%: 44.2%
+      Fact%: 31.6%
+      Opinion%: 26.4%
+  
+    TDP Alliance:
+      Negative%: 38.8%
+      Positive%: 17.4%
+      Anger%: 50.0%
+      Hope%: 12.4%
+      Aggressive%: 53.1%
+      Persuasive%: 26.6%
+      Fact%: 17.4%
+      Opinion%: 39.4%
+  
+    Key differences: The dimension with the largest gap between the two alliances reveals the primary strategic divergence in their communication approaches.
+
+  Methodology: Each metric = % per alliance across multiple classification columns.
+
+────────────────────────────────────────
+
+  INSIGHT 8.8: MASTER CONCLUSION — Cross-Dimensional Synthesis
+  ────────────────────────────────────────────────────────────
+
+  Bringing together all dimensions of analysis:
+  
+    1. SENTIMENT: Neutral-dominant discourse with significant negativity (33.0%).
+    2. EMOTION: Anger leads at 41.4%, driving the emotional temperature of political discourse.
+    3. TONE: Aggressive rhetoric dominates at 45.0%, but Persuasive is a strong counterweight.
+    4. SUBJECTIVITY: Mixed content prevails, with opinion exceeding pure facts.
+    5. HASHTAGS: More polarised than captions, serving as strategic signal amplifiers.
+    6. ENGAGEMENT: Positive sentiment generates the highest engagement.
+    7. TEMPORAL: Discourse shows evolution as elections approach.
+    8. ACCOUNTS: NCBN is the most negative overall; YS Jagan the least negative.
+    9. CONSISTENCY: Messaging coherence varies significantly across accounts.
+  
+    These findings collectively reveal a highly polarised, multi-layered political communication ecosystem in Andhra Pradesh, with distinct strategic identities for each account and clear temporal dynamics as the 2024 elections approached.
+
+  Methodology: Synthesis of all insights from scripts 01-08. No new calculations.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

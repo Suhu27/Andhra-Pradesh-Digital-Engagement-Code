@@ -1,0 +1,140 @@
+========================================================================================
+  ACCOUNT HEAD-TO-HEAD CONTRASTS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:58:06
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Account Head-to-Head Contrasts
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 9.1: YSRCP vs TDP — Party Account Head-to-Head
+  ──────────────────────────────────────────────────────
+
+  Key differences between the two main party accounts:
+  
+    Negativity: TDP (38.4%) > YSRCP (29.1%) — gap: 9.4pp
+    Positivity: YSRCP (30.0%) > TDP (16.4%) — gap: 13.6pp
+    Anger: TDP (49.9%) > YSRCP (36.0%) — gap: 13.9pp
+    Aggression: TDP (52.9%) > YSRCP (40.0%) — gap: 12.9pp
+    Persuasion: YSRCP (43.8%) > TDP (26.9%) — gap: 16.9pp
+    P/N Ratio: YSRCP=1.03, TDP=0.43
+    A/P Ratio: YSRCP=0.91, TDP=1.96
+  
+    TDP operates with a distinctly more negative, anger-driven, and aggressive posture compared to YSRCP. This is consistent with TDP's opposition role during this period, using attack-based communication to challenge the incumbent YSRCP government.
+
+  Methodology: Direct comparison of all key metrics between _account="ysrcp" and _account="tdp".
+
+────────────────────────────────────────
+
+  INSIGHT 9.2: YS Jagan vs NCBN — Leader Account Head-to-Head
+  ───────────────────────────────────────────────────────────
+
+  Key differences between the two leader accounts:
+  
+    Negativity: NCBN (42.5%) > YS Jagan (19.6%) — gap: 22.8pp
+    Positivity: YS Jagan (45.9%) > NCBN (27.7%) — gap: 18.2pp
+    Anger: NCBN (51.2%) > YS Jagan (27.5%) — gap: 23.7pp
+    Aggression: NCBN (55.0%) > YS Jagan (31.2%) — gap: 23.8pp
+    P/N Ratio: YS Jagan=2.34, NCBN=0.65
+  
+    The contrast between the two leaders is even starker than between the party accounts. YS Jagan's account maintains a significantly more positive, constructive image-building approach, while NCBN's account leans heavily into attack-oriented critical messaging.
+
+  Methodology: Direct comparison between _account="ysjagan" and _account="ncbn".
+
+────────────────────────────────────────
+
+  INSIGHT 9.3: Attack vs Self-Promotion Balance
+  ─────────────────────────────────────────────
+
+  Each account's balance between attack-oriented and self-promotional messaging:
+  
+      • YSRCP: Attack=35.0, Self-Promo=45.0, A/SP=0.78
+      • TDP: Attack=47.1, Self-Promo=29.2, A/SP=1.61
+      • NCBN: Attack=49.6, Self-Promo=36.3, A/SP=1.37
+      • YS Jagan: Attack=26.1, Self-Promo=58.9, A/SP=0.44
+  
+    Accounts with A/SP > 1 are "net attackers" — their communication is dominated by negativity, anger, and aggression. Accounts with A/SP < 1 are "net promoters" — they prioritise constructive, positive, and persuasive messaging.
+
+  Methodology: Attack = (Negative% + Anger% + Aggressive%) ÷ 3. Self-Promo = (Positive% + [Hope+Trust+Pride]% + [Persuasive+Inspirational]%) ÷ 3. A/SP = Attack ÷ Self-Promotion.
+
+────────────────────────────────────────
+
+  INSIGHT 9.4: Platform Strategy Divergence Analysis
+  ──────────────────────────────────────────────────
+
+  Do accounts tailor messaging by platform?
+  
+      • YSRCP: FB Neg=27.2%, IG Neg=31.2%, Δ=4.0pp (more negative on Instagram)
+      • TDP: FB Neg=35.4%, IG Neg=42.0%, Δ=6.6pp (more negative on Instagram)
+      • NCBN: FB Neg=40.5%, IG Neg=44.8%, Δ=4.4pp (more negative on Instagram)
+      • YS Jagan: FB Neg=18.8%, IG Neg=20.1%, Δ=1.3pp (more negative on Instagram)
+  
+    A large divergence (>5pp) in negativity between platforms suggests deliberate platform-specific communication strategy. Political actors may use one platform for aggressive attacks and another for positive image-building.
+
+  Methodology: Negative% computed separately for Facebook and Instagram per account. Δ = absolute difference.
+
+────────────────────────────────────────
+
+  INSIGHT 9.5: Communication Diversity Analysis (Shannon Entropy)
+  ───────────────────────────────────────────────────────────────
+
+  How diverse is each account's emotional and rhetorical range?
+  
+      • YSRCP: Emo Entropy=2.226 (86%), Tone Entropy=1.591 (68%)
+      • TDP: Emo Entropy=2.069 (80%), Tone Entropy=1.689 (73%)
+      • NCBN: Emo Entropy=1.944 (75%), Tone Entropy=1.553 (67%)
+      • YS Jagan: Emo Entropy=2.194 (85%), Tone Entropy=1.470 (63%)
+  
+    YSRCP has the most diverse emotional range (highest entropy), meaning its posts span multiple emotions relatively evenly. NCBN has the least diverse, being more concentrated on a single dominant emotion.
+  
+    Higher diversity can indicate sophisticated messaging strategy (different emotional appeals for different contexts) or lack of coherent messaging focus.
+
+  Methodology: Shannon Entropy H = -Σ p(x) log₂ p(x). Computed separately for emo_primary and tone_primary per account. Max entropy = log₂(N) where N = number of categories.
+
+────────────────────────────────────────
+
+  INSIGHT 9.6: Leader vs Party Account Divergence
+  ───────────────────────────────────────────────
+
+  How different is the leader's personal account from the party account?
+  
+    YSRCP Alliance:
+      YSRCP (party): Neg=29.1%, Pos=30.0%
+      YS Jagan (leader): Neg=19.6%, Pos=45.9%
+      Negativity gap: 9.4pp
+  
+    TDP Alliance:
+      TDP (party): Neg=38.4%, Pos=16.4%
+      NCBN (leader): Neg=42.5%, Pos=27.7%
+      Negativity gap: 4.0pp
+  
+    This reveals whether leaders cultivate a different (often more positive) image than their party accounts. A large gap suggests deliberate role-differentiation in the alliance's communication strategy.
+
+  Methodology: Direct comparison within each alliance between party and leader accounts.
+
+────────────────────────────────────────
+
+  INSIGHT 9.7: Comprehensive Account Ranking Summary
+  ──────────────────────────────────────────────────
+
+  Account rankings across key dimensions:
+  
+    Most Negative: NCBN (Index=49.6)
+    Least Negative: YS Jagan (Index=26.1)
+    Highest Engagement: YS Jagan (ER=2.5978%)
+    Most Factual: YSRCP (Fact=32.1%)
+    Most Persuasive: YS Jagan (Per=54.3%)
+    Most Aggressive: NCBN (Agg=55.0%)
+    Highest P/N Ratio: YS Jagan (P/N=2.34)
+  
+
+  Methodology: Rankings derived from all key metrics computed for each account.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

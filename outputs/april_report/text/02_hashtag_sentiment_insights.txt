@@ -1,0 +1,145 @@
+========================================================================================
+  HASHTAG SENTIMENT ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 11:56:36
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Hashtag Sentiment Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 2.1: Overall Hashtag Sentiment Distribution
+  ───────────────────────────────────────────────────
+
+  Among 19,864 posts with hashtags (out of 21,909 total; 2,045 have no hashtags):
+  
+    • Negative: 6,980 (35.1%)
+    • Neutral:  6,855 (34.5%)
+    • Positive: 6,029 (30.4%)
+  
+    Hashtag sentiment is more evenly distributed than caption sentiment, with the three categories closely balanced. This contrasts with caption sentiment where Neutral dominates. Hashtags tend to carry more explicit political signalling (both attack-oriented and promotional), leading to a more polarised distribution.
+
+  Methodology: Counts of hashtag_dominant_label (excluding "NoHashtags") ÷ 19,864 × 100. hashtag_dominant_label = the sentiment label (Pos/Neu/Neg) with the highest count among matched hashtags in each post.
+
+────────────────────────────────────────
+
+  INSIGHT 2.2: Hashtag Sentiment by Account
+  ─────────────────────────────────────────
+
+  Per-account hashtag sentiment (posts with hashtags only):
+  
+      • YSRCP (n=11,281): Pos=34.1%, Neu=35.0%, Neg=30.9%
+      • TDP (n=7,572): Pos=21.9%, Neu=34.1%, Neg=44.0%
+      • NCBN (n=662): Pos=36.6%, Neu=39.9%, Neg=23.6%
+      • YS Jagan (n=349): Pos=80.8%, Neu=17.5%, Neg=1.7%
+  
+    YS Jagan leads in positive hashtag usage at 80.8%, while TDP has the highest negative hashtag proportion at 44.0%.
+
+  Methodology: hashtag_dominant_label counts per _account (NoHashtags excluded) ÷ total hashtagged posts per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 2.3: Caption-Hashtag Sentiment Agreement Rate
+  ─────────────────────────────────────────────────────
+
+  Overall agreement rate: 51.5% (10,222 of 19,864 hashtagged posts have matching caption and hashtag sentiment).
+  
+    Per-account agreement rates:
+      • YSRCP: 52.0% (5,868/11,281)
+      • TDP: 52.0% (3,935/7,572)
+      • NCBN: 42.6% (282/662)
+      • YS Jagan: 39.3% (137/349)
+  
+    A random chance agreement rate with 3 classes is 33.3%, so the observed 51.5% indicates better than random alignment between caption text sentiment and hashtag sentiment. Partial agreement is expected because hashtags often serve different communicative functions (branding, trending) than the caption text itself.
+
+  Methodology: Agreement = posts where sentiment_label == hashtag_dominant_label. Rate = agreement count ÷ total hashtagged posts × 100. Random baseline = 33.3% (uniform 3-class).
+
+────────────────────────────────────────
+
+  INSIGHT 2.4: Caption-Hashtag Sentiment Disagreement Patterns
+  ────────────────────────────────────────────────────────────
+
+  When caption and hashtag sentiment disagree (9,642 posts), the most common mismatch patterns are:
+  
+      • Caption=Neutral + Hashtag=Positive: 2,652 posts
+      • Caption=Positive + Hashtag=Neutral: 2,406 posts
+      • Caption=Neutral + Hashtag=Negative: 2,106 posts
+      • Caption=Negative + Hashtag=Neutral: 1,447 posts
+      • Caption=Negative + Hashtag=Positive: 821 posts
+  
+    These mismatches often occur when a neutral/positive caption is paired with attack-oriented hashtags (negative), or when a negative critique uses self-promotional (positive) hashtags for discoverability.
+
+  Methodology: Cross-tab of sentiment_label × hashtag_dominant_label, filtered to rows where the two labels differ. Top patterns sorted by count descending.
+
+────────────────────────────────────────
+
+  INSIGHT 2.5: Hashtag Usage Volume by Account
+  ────────────────────────────────────────────
+
+  Mean hashtags per post (including posts with 0 hashtags):
+  
+      • YSRCP: 2.56 hashtags/post
+      • TDP: 5.32 hashtags/post
+      • NCBN: 1.27 hashtags/post
+      • YS Jagan: 1.08 hashtags/post
+  
+    TDP uses the most hashtags per post (5.32), while YS Jagan uses the fewest (1.08). Higher hashtag volume typically indicates a more aggressive SEO/discoverability strategy on social media, and may also reflect more complex political messaging.
+
+  Methodology: Mean of hashtag_total_count per _account for all 21,909 HC posts. Includes posts with 0 hashtags in the denominator.
+
+────────────────────────────────────────
+
+  INSIGHT 2.6: Mean Hashtag Sentiment Score by Account
+  ────────────────────────────────────────────────────
+
+  Mean hashtag_sentiment_score (range: -1.0 to +1.0):
+  
+      • YSRCP: 0.0239
+      • TDP: -0.1499
+      • NCBN: 0.1354
+      • YS Jagan: 0.7249
+  
+    YS Jagan has the most positive mean hashtag score (0.7249), while TDP has the most negative (-0.1499). A score near 0 indicates balanced hashtag usage; deviation from 0 indicates a lean toward positive or negative hashtags.
+
+  Methodology: Mean of hashtag_sentiment_score per _account (NoHashtags posts excluded). Score formula: (pos_count − neg_count) ÷ total_matched_hashtags. Range: [-1 (all neg), 0 (balanced), +1 (all pos)].
+
+────────────────────────────────────────
+
+  INSIGHT 2.7: Caption vs Hashtag Negativity Gap per Account
+  ──────────────────────────────────────────────────────────
+
+  Comparing negative% in captions vs hashtags (Δ = HashtagNeg − CaptionNeg):
+  
+      • YSRCP: Caption Neg=29.9%, Hashtag Neg=30.9%, Δ=+1.0pp
+      • TDP: Caption Neg=42.1%, Hashtag Neg=44.0%, Δ=+1.9pp
+      • NCBN: Caption Neg=45.0%, Hashtag Neg=23.6%, Δ=-21.5pp
+      • YS Jagan: Caption Neg=20.6%, Hashtag Neg=1.7%, Δ=-18.9pp
+  
+    A positive Δ means hashtags are more negative than captions — the account adds negative framing via hashtags beyond what the caption text conveys. A negative Δ means captions are more negative than hashtags — the account's attack messaging is in the text rather than the tags.
+
+  Methodology: Caption Neg% = count(sentiment_label="Negative") ÷ total hashtagged posts per account. Hashtag Neg% = count(hashtag_dominant_label="Negative") ÷ same denominator. Δ = Hashtag Neg% − Caption Neg%. Only posts with hashtags included in both calculations.
+
+────────────────────────────────────────
+
+  INSIGHT 2.8: Conclusion — Hashtag Sentiment Landscape
+  ─────────────────────────────────────────────────────
+
+  The hashtag sentiment analysis reveals:
+  
+    1. Hashtag sentiment is more evenly distributed (Neg 35.1%, Neu 34.5%, Pos 30.4%) compared to caption sentiment.
+    2. Caption-hashtag agreement is 51.5%, indicating moderate alignment.
+    3. YS Jagan has the most positive hashtag strategy; TDP the most negative.
+    4. TDP uses the highest volume of hashtags per post.
+    5. There are notable caption-hashtag sentiment gaps, suggesting strategic use of hashtags for messaging beyond what the caption text alone conveys.
+  
+    Hashtags serve as a parallel signalling mechanism that may amplify, contradict, or extend the sentiment of the caption text.
+
+  Methodology: Synthesis of insights 2.1–2.7. No new calculations.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

@@ -1,0 +1,210 @@
+========================================================================================
+  RHETORICAL TONE ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:05:38
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Rhetorical Tone Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 4.1: Overall Rhetorical Tone Distribution
+  ─────────────────────────────────────────────────
+
+  Among 19,778 classified posts (excluding 12 Neutral-tone posts):
+  
+      • Aggressive: 8,905 (45.0%)
+      • Persuasive: 7,355 (37.2%)
+      • Inspirational: 2,713 (13.7%)
+      • Victim Narrative: 672 (3.4%)
+      • Defensive: 133 (0.7%)
+  
+    Aggressive rhetoric is the most common tone at 45.0%, followed by Persuasive at 37.2%. Together, these two tones account for 82.2% of all classified posts, indicating that AP political social media is dominated by either attack-oriented or constructive-persuasion content. Inspirational content (13.7%) is a distant third, while Victim Narrative (3.4%) and Defensive (0.7%) are minority strategies.
+
+  Methodology: Counts of tone_primary per label ÷ 19,778 × 100. Neutral-tone posts (12) excluded. SKIPPED/_insufficient posts also excluded upfront.
+
+────────────────────────────────────────
+
+  INSIGHT 4.2: Rhetorical Tone Breakdown by Account
+  ─────────────────────────────────────────────────
+
+  Per-account tone profiles:
+  
+      • YSRCP (n=11,522): Dominant=Persuasive (43.8%) | Agg=40.0%, Per=43.8%, Ins=13.9%
+      • TDP (n=7,044): Dominant=Aggressive (52.9%) | Agg=52.9%, Per=26.9%, Ins=12.9%
+      • NCBN (n=827): Dominant=Aggressive (55.0%) | Agg=55.0%, Per=23.8%, Ins=18.9%
+      • YS Jagan (n=385): Dominant=Persuasive (54.3%) | Agg=31.2%, Per=54.3%, Ins=13.2%
+  
+    NCBN leads in aggression (55.0%), YS Jagan in persuasion (54.3%), and NCBN in inspiration (18.9%). These profiles reveal fundamentally different communication strategies across the political spectrum in AP.
+
+  Methodology: Counts of tone_primary per _account ÷ total classified posts (excl. Neutral) for that account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.3: Aggressive-to-Persuasive Ratio — Attack vs Constructive Strategy
+  ─────────────────────────────────────────────────────────────────────────────
+
+  Aggressive/Persuasive ratio by account:
+  
+      • YSRCP: 0.91 (Agg=4,607, Per=5,052)
+      • TDP: 1.96 (Agg=3,723, Per=1,897)
+      • NCBN: 2.31 (Agg=455, Per=197)
+      • YS Jagan: 0.57 (Agg=120, Per=209)
+  
+    A ratio > 1.0 indicates a strategy that favours attack rhetoric over constructive persuasion. A ratio < 1.0 indicates a focus on positive messaging. This metric is a concise summary of each account's rhetorical orientation.
+
+  Methodology: Ratio = count(Aggressive) ÷ count(Persuasive) per account. Source: tone_primary column, Neutral excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 4.4: Alliance-Level Rhetorical Strategy Comparison
+  ──────────────────────────────────────────────────────────
+
+  YSRCP Alliance (n=11,907):
+      Aggressive: 39.7% (4,727)
+      Persuasive: 44.2% (5,261)
+      Inspirational: 13.9% (1,650)
+      Victim Narrative: 1.6% (192)
+      Defensive: 0.6% (77)
+  
+    TDP Alliance (n=7,871):
+      Aggressive: 53.1% (4,178)
+      Persuasive: 26.6% (2,094)
+      Inspirational: 13.5% (1,063)
+      Victim Narrative: 6.1% (480)
+      Defensive: 0.7% (56)
+  
+    The alliance comparison reveals the aggregate rhetorical balance of each political camp, smoothing out individual account differences.
+
+  Methodology: tone_primary counts per _alliance ÷ total classified posts (excl. Neutral) per alliance × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.5: Victim Narrative Usage — Who Plays the Victim?
+  ───────────────────────────────────────────────────────────
+
+  Victim Narrative percentage by account:
+  
+      • YSRCP: 1.6%
+      • TDP: 6.6%
+      • NCBN: 2.2%
+      • YS Jagan: 1.3%
+  
+    TDP uses victim narrative rhetoric the most (6.6%). Victim narrative is a powerful political tool used to generate sympathy and frame the opposition as oppressors. Its strategic deployment varies significantly across accounts.
+
+  Methodology: Count of tone_primary="Victim_Narrative" per account ÷ total classified posts (excl. Neutral) per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.6: Defensive Tone Analysis — A Rare Strategy
+  ──────────────────────────────────────────────────────
+
+  Defensive tone is the rarest rhetorical strategy, appearing in only 133 posts (0.7%).
+  
+    Per-account Defensive rates:
+      • YSRCP: 0.7%
+      • TDP: 0.8%
+      • NCBN: 0.1%
+      • YS Jagan: 0.0%
+  
+    The rarity of defensive rhetoric suggests that political actors in AP prefer to go on the offensive rather than defend against attacks. When defensive tone does appear, it is typically in response to specific allegations or scandals.
+
+  Methodology: Count of tone_primary="Defensive" per account ÷ total classified posts (excl. Neutral) per account × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.7: Rhetorical Tone Temporal Trends
+  ────────────────────────────────────────────
+
+  Tone evolution across timelines:
+  
+      • Jun–Aug 2023 (n=5,098): Agg=45.3%, Per=39.1%, VN=2.1%
+      • Sep–Dec 2023 (n=6,011): Agg=43.5%, Per=37.7%, VN=5.5%
+      • Jan–May 2024 (n=8,669): Agg=45.9%, Per=35.7%, VN=2.7%
+  
+    Aggression shows a increasing trend: 45.3% (Jun–Aug 2023) → 45.9% (Jan–May 2024), a shift of +0.6pp. The pre-election period (Jan–May 2024) is particularly noteworthy for any escalation or de-escalation in rhetorical aggression.
+
+  Methodology: tone_primary counts per _timeline ÷ total classified posts (excl. Neutral) in that period × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.8: Tone–Engagement Relationship
+  ─────────────────────────────────────────
+
+  Mean Engagement Rate (Monthly) by tone:
+  
+      • Inspirational: 1.7873% (n=2,713)
+      • Victim Narrative: 1.6278% (n=672)
+      • Defensive: 1.3413% (n=133)
+      • Persuasive: 1.2608% (n=7,355)
+      • Aggressive: 1.2474% (n=8,905)
+  
+    Inspirational generates the highest mean engagement (1.7873%), while Aggressive the lowest (1.2474%). This suggests audiences reward certain rhetorical approaches more than others.
+
+  Methodology: Mean of Engagement_Rate_Monthly per tone_primary label × 100 for %. Neutral-tone excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 4.9: Platform Tone Differences — Facebook vs Instagram
+  ──────────────────────────────────────────────────────────────
+
+  Facebook (n=10,051):
+      Aggressive: 44.2%
+      Persuasive: 37.6%
+      Inspirational: 14.0%
+      Victim Narrative: 3.5%
+      Defensive: 0.7%
+  
+    Instagram (n=9,727):
+      Aggressive: 45.9%
+      Persuasive: 36.8%
+      Inspirational: 13.4%
+      Victim Narrative: 3.3%
+      Defensive: 0.7%
+  
+    Platform-level differences may reflect strategic content adaptation: Instagram audiences (younger, visual-oriented) may respond differently to aggressive rhetoric compared to Facebook audiences.
+
+  Methodology: tone_primary counts per _platform ÷ total classified posts (excl. Neutral) on that platform × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 4.10: Classifier Confidence by Tone
+  ───────────────────────────────────────────
+
+  Mean classifier confidence score by tone:
+  
+      • Aggressive: 0.797
+      • Persuasive: 0.677
+      • Inspirational: 0.512
+      • Victim Narrative: 0.557
+      • Defensive: 0.560
+  
+    Aggressive has the highest mean confidence (0.797), suggesting the model finds the clearest linguistic markers for that tone. Lower confidence tones are more ambiguous and may benefit from further validation.
+
+  Methodology: Mean of tone_primary_c per tone_primary label. Higher values = more certain classification.
+
+────────────────────────────────────────
+
+  INSIGHT 4.11: Conclusion — Rhetorical Tone Landscape
+  ────────────────────────────────────────────────────
+
+  The AP political rhetorical landscape is characterised by:
+  
+    1. Aggressive dominance at 45.0% — the prevailing strategy.
+    2. Persuasive rhetoric (37.2%) serves as the primary counterweight to aggression.
+    3. Victim Narrative (3.4%) and Defensive (0.7%) are niche strategies with uneven adoption.
+    4. Inspirational content generates the highest engagement.
+    5. Aggression is increasing toward the pre-election period (+0.6pp).
+    6. Significant inter-account variation reveals distinct rhetorical identities.
+  
+    These findings indicate a highly confrontational political communication environment where attack-based rhetoric is the default, but with meaningful variation in how each account balances aggression with persuasion and inspiration.
+
+  Methodology: Synthesis of insights 4.1–4.10.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

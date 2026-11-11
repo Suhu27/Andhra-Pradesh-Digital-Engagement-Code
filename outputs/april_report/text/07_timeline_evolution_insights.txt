@@ -1,0 +1,158 @@
+========================================================================================
+  TIMELINE EVOLUTION ANALYSIS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:36:49
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Timeline Evolution Analysis
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 7.1: Post Volume Trends Across Timelines
+  ────────────────────────────────────────────────
+
+  Number of posts per account per timeline:
+  
+      • YSRCP: 3,141 → 4,053 → 5,014 (increasing)
+      • TDP: 2,411 → 2,235 → 3,707 (increasing)
+      • NCBN: 196 → 49 → 624 (increasing)
+      • YS Jagan: 74 → 62 → 343 (increasing)
+  
+    Changes in posting frequency reveal strategic intensification or de-escalation as elections approach. An increase in the final period (Jan–May 2024) may indicate pre-election campaign ramping.
+
+  Methodology: Count of rows per _account per _timeline. All HC posts (n=21,909).
+
+────────────────────────────────────────
+
+  INSIGHT 7.2: Negativity Trajectory per Account
+  ──────────────────────────────────────────────
+
+  Negative sentiment % across timelines:
+  
+      • YSRCP: 27.4% → 29.8% → 29.5% (Δ=+2.1pp)
+      • TDP: 35.4% → 40.3% → 39.3% (Δ=+3.9pp)
+      • NCBN: 52.0% → 26.5% → 40.7% (Δ=-11.3pp)
+      • YS Jagan: 13.5% → 9.7% → 22.7% (Δ=+9.2pp)
+  
+    Tracking negativity over time reveals whether discourse is escalating or de-escalating. A rising negativity trajectory in the pre-election period suggests intensifying political attacks.
+
+  Methodology: Count of sentiment_label="Negative" per account-timeline ÷ total per account-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.3: Anger Trajectory per Account
+  ─────────────────────────────────────────
+
+  Anger (emo_primary) % across timelines:
+  
+      • YSRCP: 35.6% → 36.6% → 35.8% (Δ=+0.2pp)
+      • TDP: 48.6% → 53.2% → 48.6% (Δ=+0.0pp)
+      • NCBN: 57.9% → 35.6% → 50.4% (Δ=-7.5pp)
+      • YS Jagan: 17.6% → 8.2% → 34.6% (Δ=+17.0pp)
+  
+    Anger is the key emotion driving political discourse. Its trajectory reveals whether the emotional temperature is rising or cooling.
+
+  Methodology: Count of emo_primary="Anger" per account-timeline ÷ total classified per account-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.4: Aggression Trajectory per Account
+  ──────────────────────────────────────────────
+
+  Aggressive tone % across timelines:
+  
+      • YSRCP: 39.7% → 41.0% → 39.3% (Δ=-0.4pp)
+      • TDP: 53.5% → 49.6% → 54.5% (Δ=+1.0pp)
+      • NCBN: 60.9% → 31.8% → 55.0% (Δ=-5.9pp)
+      • YS Jagan: 19.4% → 9.8% → 39.3% (Δ=+19.9pp)
+  
+    Escalation or de-escalation of aggressive rhetoric is a key indicator of how the political climate is evolving.
+
+  Methodology: Count of tone_primary="Aggressive" per account-timeline ÷ total classified (excl. Neutral) per account-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.5: Hope+Trust (Positive Emotion) Trajectory per Account
+  ─────────────────────────────────────────────────────────────────
+
+  Combined Hope+Trust % across timelines:
+  
+      • YSRCP: 32.4% → 34.3% → 31.6% (Δ=-0.8pp)
+      • TDP: 18.4% → 16.7% → 24.1% (Δ=+5.8pp)
+      • NCBN: 11.8% → 33.3% → 28.6% (Δ=+16.8pp)
+      • YS Jagan: 25.0% → 34.4% → 31.9% (Δ=+6.9pp)
+  
+    An increase in hope/trust suggests a shift toward aspirational messaging; a decrease suggests deepening negativity and attack-oriented strategy.
+
+  Methodology: Count of emo_primary in (Hope, Trust) per account-timeline ÷ total classified per account-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.6: Engagement Rate Trajectory per Account
+  ───────────────────────────────────────────────────
+
+  Mean Engagement Rate (Monthly) across timelines:
+  
+      • YSRCP: 0.9658% → 0.7097% → 1.2920% (Δ=+0.3262pp)
+      • TDP: 1.5506% → 1.8285% → 1.7796% (Δ=+0.2290pp)
+      • NCBN: 1.8338% → 1.4662% → 1.1833% (Δ=-0.6505pp)
+      • YS Jagan: 2.5085% → 2.6202% → 2.6130% (Δ=+0.1044pp)
+  
+    Engagement trajectory shows whether audiences are becoming more or less responsive to political content over time. Pre-election periods often see heightened engagement due to increased political interest.
+
+  Methodology: Mean(Engagement_Rate_Monthly) per account-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.7: Pre-Election Period (Jan–May 2024) vs Earlier Periods
+  ──────────────────────────────────────────────────────────────────
+
+  Comparing the pre-election period to earlier periods:
+  
+    Negative sentiment: Pre-election=33.7%, Earlier=32.4%, Δ=+1.4pp
+    Anger emotion: Pre-election=41.4%, Earlier=41.4%, Δ=-0.0pp
+    Pre-election posts: 9,688 (44.2% of total)
+    Earlier posts: 12,221 (55.8% of total)
+  
+    The pre-election period (AP state elections, Jun 2024) is crucial for understanding campaign intensification. Negativity increased and anger de-escalated as the election approached.
+
+  Methodology: Pre-election = _timeline="JanMay2024". Earlier = Jun-Aug 2023 + Sep-Dec 2023. Percentages computed separately for each period.
+
+────────────────────────────────────────
+
+  INSIGHT 7.8: Alliance Negativity Trajectory
+  ───────────────────────────────────────────
+
+  Negative sentiment % by alliance across timelines:
+  
+      • YSRCP Alliance: 27.1% → 29.5% → 29.1% (Δ=+2.0pp)
+      • TDP Alliance: 36.7% → 40.0% → 39.5% (Δ=+2.8pp)
+  
+    The alliance-level trajectory reveals the aggregate strategic direction of each political camp over time.
+
+  Methodology: Count of sentiment_label="Negative" per alliance-timeline ÷ total per alliance-timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 7.9: Conclusion — Temporal Dynamics
+  ───────────────────────────────────────────
+
+  Key temporal findings:
+  
+    1. Post volume shows distinct patterns across accounts as elections approach.
+    2. Negativity follows account-specific trajectories — not all accounts become more negative simultaneously.
+    3. Anger and aggression trajectories reveal escalation/de-escalation patterns.
+    4. The pre-election period (Jan–May 2024) shows heightened negativity overall.
+    5. Engagement rates evolve over time, potentially reflecting audience fatigue or heightened political interest.
+  
+    These temporal patterns are essential for understanding the dynamics of political social media communication in the context of the AP state elections.
+
+  Methodology: Synthesis of insights 7.1–7.8.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================

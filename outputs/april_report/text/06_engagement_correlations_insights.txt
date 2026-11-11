@@ -1,0 +1,152 @@
+========================================================================================
+  ENGAGEMENT × SENTIMENT CORRELATIONS
+  AP Political Sentiment Analysis — Research-Grade Insights Report
+  Dataset: phase3_classified_patched.csv
+  Generated: 2026-04-19 12:35:26
+========================================================================================
+
+────────────────────────────────────────────────────────────────────────────────────────
+  SECTION: Engagement × Sentiment Correlations
+────────────────────────────────────────────────────────────────────────────────────────
+
+  INSIGHT 6.1: Engagement Rate by Caption Sentiment — Overall
+  ───────────────────────────────────────────────────────────
+
+  Mean Engagement Rate (Monthly) by caption sentiment:
+  
+      • Positive: 1.4611% (n=5,485)
+      • Neutral: 1.3169% (n=9,203)
+      • Negative: 1.2589% (n=7,221)
+  
+    Positive posts generate the highest mean engagement rate, while Negative generates the lowest. The difference between highest and lowest is 0.2021 percentage points.
+  
+    This addresses a fundamental question in political communication: does negativity drive engagement? The data shows that positive content is the most engaging, challenging the negativity bias hypothesis.
+
+  Methodology: Mean of Engagement_Rate_Monthly per sentiment_label. Engagement_Rate_Monthly is pre-computed as total engagements ÷ estimated reach.
+
+────────────────────────────────────────
+
+  INSIGHT 6.2: Multi-Metric Engagement by Sentiment
+  ─────────────────────────────────────────────────
+
+  Mean raw engagement metrics by caption sentiment:
+  
+      • Likes: Positive=3,751, Neutral=2,967, Negative=2,794 → Highest: Positive
+      • Comments: Positive=31, Neutral=32, Negative=44 → Highest: Negative
+      • Shares: Positive=177, Neutral=286, Negative=307 → Highest: Negative
+      • Views: Positive=41,708, Neutral=63,098, Negative=46,944 → Highest: Neutral
+  
+    While ER normalises for audience size, raw metrics (likes, comments, shares, views) reveal absolute engagement volume. These may differ from ER rankings because larger accounts naturally get more raw engagement.
+
+  Methodology: Mean of likes, comments_count, shares, views per sentiment_label. These are raw counts, not normalised for audience size.
+
+────────────────────────────────────────
+
+  INSIGHT 6.3: Negativity Bias Test per Account
+  ─────────────────────────────────────────────
+
+  Does negativity drive more engagement? Per-account comparison (Negative ER − Positive ER):
+  
+      • YSRCP: Neg ER=0.8515%, Pos ER=1.1500%, Δ=-0.2985pp (positivity advantage)
+      • TDP: Neg ER=1.7041%, Pos ER=1.9840%, Δ=-0.2799pp (positivity advantage)
+      • NCBN: Neg ER=1.0442%, Pos ER=1.9371%, Δ=-0.8930pp (positivity advantage)
+      • YS Jagan: Neg ER=2.2807%, Pos ER=2.8655%, Δ=-0.5848pp (positivity advantage)
+  
+    The negativity bias hypothesis is a key research question in political communication. A positive Δ means negative posts get MORE engagement than positive ones; a negative Δ means positive content is more engaging. This varies by account.
+
+  Methodology: Mean(Engagement_Rate_Monthly) for Negative vs Positive posts per account. Δ = Negative_ER − Positive_ER (both × 100).
+
+────────────────────────────────────────
+
+  INSIGHT 6.4: Anger vs Hope — Which Emotion Gets More Engagement?
+  ────────────────────────────────────────────────────────────────
+
+  Anger posts: Mean ER = 1.2451% (n=8,198)
+    Hope posts:  Mean ER = 1.5907% (n=2,283)
+    Difference:  -0.3456pp
+  
+    This comparison directly tests whether outrage-driven content (anger) generates more engagement than aspirational content (hope). Hope wins with a 0.3456pp advantage. This has direct implications for campaign strategy and content design.
+
+  Methodology: Mean(Engagement_Rate_Monthly) for emo_primary="Anger" vs "Hope". Classified posts only.
+
+────────────────────────────────────────
+
+  INSIGHT 6.5: Inspirational vs Aggressive Tone — Engagement Comparison
+  ─────────────────────────────────────────────────────────────────────
+
+  Inspirational tone: Mean ER = 1.7873% (n=2,713)
+    Aggressive tone:   Mean ER = 1.2474% (n=8,905)
+    Difference:        +0.5400pp
+  
+    Inspirational content generates higher engagement. This is a key strategic insight: even in a highly aggressive discourse environment, the rhetorical approach that resonates most with audiences may not be the most common one.
+
+  Methodology: Mean(Engagement_Rate_Monthly) for tone_primary="Inspirational" vs "Aggressive". Neutral-tone excluded.
+
+────────────────────────────────────────
+
+  INSIGHT 6.6: Profile of Top 20 Highest-Engagement Posts
+  ───────────────────────────────────────────────────────
+
+  The 20 posts with the highest Engagement Rate Monthly (ER range: 0.6141 – 2.9326):
+  
+    Sentiment: Neutral=8, Positive=7, Negative=5
+    Accounts:  TDP=10, YSRCP=9, NCBN=1
+  
+    The viral/high-engagement posts tend to cluster around particular sentiments and accounts. This profile reveals who creates the most engaging content and what emotional/tonal characteristics define viral political posts in AP.
+
+  Methodology: Top 20 rows by Engagement_Rate_Monthly (descending). Breakdown by sentiment_label, emo_primary, tone_primary, _account.
+
+────────────────────────────────────────
+
+  INSIGHT 6.7: Engagement by Subjectivity — Facts vs Opinions
+  ───────────────────────────────────────────────────────────
+
+  Mean ER by subjectivity label:
+  
+      • Fact: 1.2692% (n=5,143)
+      • Mixed: 1.3380% (n=8,392)
+      • Opinion: 1.3992% (n=6,255)
+  
+    Opinion posts generate the highest engagement. This reveals whether audiences are more responsive to factual evidence or emotional opinions in political discourse.
+
+  Methodology: Mean(Engagement_Rate_Monthly) per subj_label. Classified posts only.
+
+────────────────────────────────────────
+
+  INSIGHT 6.8: Engagement-Sentiment Relationship Over Time
+  ────────────────────────────────────────────────────────
+
+  Mean ER by sentiment across timelines:
+  
+      Jun–Aug 2023: Positive=1.5548%, Neutral=1.0414%, Negative=1.3297%
+      Sep–Dec 2023: Positive=1.1518%, Neutral=1.0657%, Negative=1.1761%
+      Jan–May 2024: Positive=1.6195%, Neutral=1.6572%, Negative=1.2733%
+  
+    Tracking how the engagement-sentiment relationship changes across time reveals whether audiences become more or less receptive to particular sentiments as the political cycle progresses.
+
+  Methodology: Mean(Engagement_Rate_Monthly) per sentiment_label per _timeline × 100.
+
+────────────────────────────────────────
+
+  INSIGHT 6.9: Conclusion — Engagement-Sentiment Dynamics
+  ───────────────────────────────────────────────────────
+
+  Key findings on engagement-sentiment correlations:
+  
+    1. Positive posts generate the highest overall engagement.
+    2. The negativity bias hypothesis is not supported at the overall level.
+    3. There is significant per-account variation in the negativity bias pattern.
+    4. Hope outperforms Anger in engagement.
+    5. Inspirational tone generates higher ER than Aggressive.
+    6. Opinion content gets the most engagement among subjectivity categories.
+  
+    These findings have direct strategic implications: political actors who understand which emotional register maximises engagement can optimise their content strategy.
+
+  Methodology: Synthesis of insights 6.1–6.8.
+
+────────────────────────────────────────
+
+
+========================================================================================
+  END OF REPORT
+========================================================================================
