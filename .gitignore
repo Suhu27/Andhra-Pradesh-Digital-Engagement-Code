@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.idea/
+.vscode/
+src/Analysis_Output/
+src/*_HashtagClassified.xlsx
+src/*_Research_Classified.csv
+src/*_Themed.xlsx
+src/*.csv
+src/*.json
+src/*.log
+data/
+*.zip
+
